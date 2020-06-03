@@ -66,7 +66,7 @@ function updateProductHandler(req, res, next) {
       throw new Error(`Require product 'title'!`)
     }
 
-    let product = list.find(item => item.id)
+    let product = list.find(item => item.id == id)
     if(!product) {
       throw new Error(`Not found product with id '${data.id}'`)
     }
